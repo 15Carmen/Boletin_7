@@ -1,5 +1,14 @@
 package Actividad_6;
 
+/**
+ * Actividad 6.-
+ * Se desea obtener la fecha del día y pedir por teclado un número entero de segundos.
+ * Se solicita que se muestre la hora del día y las n siguientes horas que se diferencian en un segundo.
+ * Habrá que crearse la clase Hora que se seteará con la hora del sistema y que dispondrá de los
+ * atributos hora, minutos y segundos
+ * Usar Try/catch para validar que los segundos es un valor válido
+ */
+
 public class Hora {
 
     private int horas;

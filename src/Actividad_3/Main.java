@@ -2,6 +2,14 @@ package Actividad_3;
 
 public class Main {
 
+    /**
+     * Actividad 3.-
+     * Crear un enumerado que contenga estos valores {COCHE, CAMION, BARCO, TREN,
+     * AVION} y muestre su número de orden y haga comparaciones indicando quién puede ser más
+     * rápido que otro. Por ejemplo: “BARCO es más rápido que COCHE” o “COCHE es más lento que
+     * TREN” o “CAMIÓN es igual de rápido que CAMIÓN”
+     */
+
     public enum VEHICULO
     {
         COCHE("COCHE NUEVO",1),

@@ -3,7 +3,8 @@ package Actividad_5;
 public class SintonizadorFM {
 
     /**
-     *      Se quiere definir una clase (SintonizadorFM) que permita controlar un sintonizador
+     * Actividad 5.-
+     * Se quiere definir una clase (SintonizadorFM) que permita controlar un sintonizador
      * digital de emisoras FM; concretamente, se desea dotar al controlador de una interfaz que permita
      * subir (up) o bajar (down) la frecuencia, en saltos de 0,5 MHz y mostrar la frecuencia en un
      * momento dado Display. El rango de frecuencias va a oscilar entre 80 y 108 MHz, y al inicio, el
@@ -13,6 +14,7 @@ public class SintonizadorFM {
      */
 
     //Parámetros
+
     private class Sintonizador{
         private static final double MaxFrecuencia = 108f;
         private final double MinFrecuencia = 80f;
