@@ -20,7 +20,12 @@ public class Main {
         //bajar de nuevo la frecuencia
 
         sintonizador.down();
-        System.out.println("Al bajar la frecuencia, " + sintonizador + " MHz");
+        System.out.println(sintonizador + " MHz");
+
+        //subo de nuevo la frecuencia
+
+        sintonizador.up();
+        System.out.println(sintonizador + " MHz");
 
     }
 }
