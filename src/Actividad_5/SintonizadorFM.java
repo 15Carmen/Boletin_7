@@ -13,15 +13,55 @@ public class SintonizadorFM {
      * básico para probar su funcionamiento.
      */
 
-    //Parámetros
+        //Parámetros
 
-    private class Sintonizador{
-        private static final double MaxFrecuencia = 108f;
-        private final double MinFrecuencia = 80f;
-        private final double SaltoFrecuencia = 0.5f;
-        private double frecuencia = MinFrecuencia;
+        static final double MaxFrecuencia = 108f;
+        final double MinFrecuencia = 80f;
+        final double SaltoFrecuencia = 0.5f;
+        private double frecuencia;
+
+        //constructor
+    /**
+     * creamos el objeto del constructor con la frecuencia minima
+     *
+     */
+
+    public SintonizadorFM () {
+        this.frecuencia = MinFrecuencia;
     }
 
+    /**
+     * cada vez que aumento la frecuencia aumenta un salto
+     * Si llego a la frecuencia máxima, vuelvo a la frecuencia mínima
+     * precondición: llamamos al método up, porque así nos lo indica el ejercicio
+     */
 
+    public void up(){
+        this.frecuencia += SaltoFrecuencia;
+        if (this.frecuencia > MaxFrecuencia){
+            this.frecuencia = MinFrecuencia;
+        }
+    }
+
+    /**
+     * cada vez que disminuyo la frecuencia disminuyo un salto
+     * Si llego a la frecuencia mínima, vuelvo a la frecuencia máxima
+     * precondición: llamamos al método down, porque así nos lo indica el ejercicio
+     */
+
+    public void down(){
+        this.frecuencia -= SaltoFrecuencia;
+        if (this.frecuencia < MinFrecuencia){
+            this.frecuencia=MaxFrecuencia;
+        }
+    }
+
+    public String toString(){
+        String display;
+        display = "actualmente el sintonizador marca: "+ this.frecuencia;
+        return display;
+    }
 
 }
+
+
