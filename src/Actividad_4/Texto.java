@@ -17,41 +17,80 @@ public class Texto {
      * devuelve -1 si no lo encuentra
      */
 
+
     private String caracteres;
     private int limite;
 
+
+    /**
+     * Usamos un metodo getter para poder imprimir los caracteres que indiquemos
+     * @return
+     */
     public String getCaracteres() {
         return caracteres;
     }
 
+    /**
+     *
+     * constructor
+     * @param limite
+     */
     public Texto(int limite){
-        if(limite==0)this.limite=1;
+
         this.limite=limite;
         this.caracteres="";
+
+        if(limite==0){
+            this.limite=1;
+        }
     }
+
+    /**
+     * metodo para contar vocales
+     * precondicion: usamos un contador para acumular el número de vocales que tenga la palabra
+     * @return contador
+     */
     public int countVocal(){
         int contador=0;
         String vocales[]={"a","e","i","o","u"};
 
-        for(int pos=0;pos<this.caracteres.length();pos++){
-            char car=this.caracteres.charAt(pos);
+        for(int posicion=0;posicion<this.caracteres.length();posicion++){
+
+            char car=this.caracteres.charAt(posicion);
+
             for(int i=0;i<vocales.length;i++){
+
                 //obtiene el primer caracter de la cadena
                 char vocal=vocales[i].charAt(0);
-                if(car==vocal)
+
+                if(car==vocal){
                     contador++;
+                }
             }
         }
         return contador;
     }
 
+    /**
+     * metodo para añadir una cadena de texto al principio
+     * @param cadena
+     */
     public void addStringFirst(String cadena){
 
     }
+
+    /**
+     * metodo para añadir una cadena de texto al final
+     *
+     */
     public void addStringLast(String cadena){
 
-
     }
+
+    /**
+     * metodo para añadir texto al principio de la cadena
+     * @param cadena
+     */
     public void addTextFirst(String cadena){
         if(cadena.length()!=1){
             return;
@@ -62,6 +101,11 @@ public class Texto {
             }
         }
     }
+
+    /**
+     * metodo para añadir texto al final de la cadena
+     * @param cadena
+     */
     public void addTextLast(String cadena){
         if(cadena.length()!=1){
             return;
