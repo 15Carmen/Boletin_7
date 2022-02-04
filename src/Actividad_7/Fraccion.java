@@ -45,8 +45,8 @@ public class Fraccion {
         return resultado;
     }
 
-    //creamos un método para multiplicar la fracciín por una fracción
-    public void multiplicarPor(Fraccion f) {
+    //creamos un método para multiplicar la fracción por una fracción
+    public void multiplicarFraccion(Fraccion f) {
         Fraccion fraccion= new Fraccion(Math.abs(this.numerador*f.numerador),Math.abs(this.denominador*f.denominador));
         fraccion.signo = calcularSigno(f.numerador, f.denominador);
         fraccion=simplificar(fraccion);
@@ -57,22 +57,23 @@ public class Fraccion {
     }
 
     //creamos un método para multiplicar lla fracción por un número
-    public void multiplicarPor(int num) {
+    public void multiplicarNumero(int num) {
         this.numerador=this.numerador*Math.abs(num);
         if (num<0){
             this.signo *=-1;
         }
     }
 
-    public void dividirPor(int num) {
+    public void dividirNumero(int num) {
         this.numerador=this.numerador/Math.abs(num);
         if (num<0){
             this.signo *=-1;
         }
 
     }
-    public void dividirPor(Fraccion f) {
-        Fraccion fraccion= new Fraccion(Math.abs(this.numerador*f.denominador),Math.abs(this.denominador*f.numerador));
+    public void dividirFraccion(Fraccion f) {
+        Fraccion fraccion= new Fraccion(Math.abs(this.numerador*f.denominador),
+                Math.abs(this.denominador*f.numerador));
         fraccion.signo = calcularSigno(f.numerador, f.denominador);
         fraccion=simplificar(fraccion);
         this.numerador=fraccion.numerador;
@@ -80,23 +81,30 @@ public class Fraccion {
         this.signo *= fraccion.signo;
 
     }
+
+    //creamos un método para simplificar la fraccion
     public Fraccion simplificar (Fraccion f){
+
         Fraccion fraccion = new Fraccion(f.numerador,f.denominador);
+
         for (int i = 2; i<=Math.min(f.numerador, f.denominador);i++) {
             if (( f.numerador % i == 0 ) && ( f.denominador % i == 0 )) {
                 f.numerador /= i;
                 f.denominador /= i;
             }
         }
+
         fraccion.denominador= f.denominador;
         fraccion.numerador= f.numerador;
         return fraccion;
     }
 
+    //creamos un método para invertir el signo de la fracción
     public void invertirSigno() {
         this.signo *= -1;
     }
 
+    //creamos un método toString para
     public String toString(){
         String resultado;
         char signo=' ';

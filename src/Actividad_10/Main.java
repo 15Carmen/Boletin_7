@@ -31,7 +31,7 @@ public class Main {
 
         System.out.println("\nOrdenamos a los gatitos por sus razas");
 
-        if (gatete1.compareToColor(gatete2)<0){
+        if (gatete1.compareToRaza(gatete2)<0){
             System.out.println(gatete2);
             System.out.println(gatete1);
         }else{
