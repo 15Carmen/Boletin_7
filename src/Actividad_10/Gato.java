@@ -55,6 +55,12 @@ package Actividad_10;
         public int compareToNombres(Gato gatito) {
             return (this.nombre).compareTo(gatito.getNombre());
         }
+        public int compareToColor(Gato gatito){
+            return (this.color).compareTo(gatito.getColor());
+        }
+        public int compareToRaza(Gato gatito){
+            return (this.raza).compareTo(gatito.getRaza());
+        }
         public int compareToEdad(Gato gatito) {
             return this.edad-gatito.edad;
         }

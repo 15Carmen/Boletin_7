@@ -9,11 +9,31 @@ public class Main {
 
         //comparamos a los dos gatitos
 
-        System.out.println("Ordenamos a los gatitos por orden alfabético");
+        System.out.println("\nOrdenamos a los gatitos por orden alfabético");
 
         if (gatete1.compareToNombres(gatete2)<0) {
             System.out.println(gatete1);
             System.out.println(gatete2);
+        }else{
+            System.out.println(gatete2);
+            System.out.println(gatete1);
+        }
+
+        System.out.println("\nOrdenamos a los gatitos por colores");
+
+        if (gatete1.compareToColor(gatete2)<0){
+            System.out.println(gatete2);
+            System.out.println(gatete1);
+        }else{
+            System.out.println(gatete2);
+            System.out.println(gatete1);
+        }
+
+        System.out.println("\nOrdenamos a los gatitos por sus razas");
+
+        if (gatete1.compareToColor(gatete2)<0){
+            System.out.println(gatete2);
+            System.out.println(gatete1);
         }else{
             System.out.println(gatete2);
             System.out.println(gatete1);

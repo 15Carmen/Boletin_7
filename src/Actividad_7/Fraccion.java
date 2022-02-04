@@ -15,4 +15,8 @@ public class Fraccion {
      * Para simplificar la fracción ayudaros del método Math.min que devuelve el mínimo de dos
      * números (el tipo devuelto es el mismo tipo de los números que compara)
      */
+
+    private int numerador;
+    private int denominador;
+
 }
