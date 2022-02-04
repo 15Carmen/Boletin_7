@@ -10,6 +10,7 @@ public class Main {
      * TREN” o “CAMIÓN es igual de rápido que CAMIÓN”
      */
 
+    //en la clase enum no solo enumeramos los medios de transporte, sino que también
     public enum VEHICULO
     {
         COCHE("COCHE NUEVO",1),

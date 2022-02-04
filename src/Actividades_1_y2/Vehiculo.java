@@ -32,7 +32,7 @@ package Actividades_1_y2;
     /**
     * Creamos una clase enum para poner todas las marcas de coches
     */
-    enum MarcadeVehiculo {BMW, MERCEDES, AVENSIS, TOYOTA, SEAT, NISSAN, AUDI, NO_VALIDA}
+    enum MarcadeVehiculo {BMW, MERCEDES, AVENSIS, TOYOTA, SEAT, NISSAN, AUDI, NO_DETERMINADA}
 
 public class Vehiculo {
 
@@ -50,20 +50,20 @@ public class Vehiculo {
      */
 
     public Vehiculo() {
-        this.marca = MarcadeVehiculo.NO_VALIDA;
+        this.marca = MarcadeVehiculo.NO_DETERMINADA;
         this.matricula = "";
 
     }
 
-    //getter and setter
+    //getter y setter
 
-    public String  getMarcaString() {
+    public String getMarcaString() {
 
         return marca.name().toUpperCase();
     }
 
     public MarcadeVehiculo getMarca() {
-        MarcadeVehiculo modelo = null;
+        MarcadeVehiculo modelo = this.marca;
         this.marca=modelo;
         return modelo;
     }
@@ -85,7 +85,7 @@ public class Vehiculo {
             case "SEAT" -> this.marca = MarcadeVehiculo.SEAT;
             case "NISSAN" -> this.marca = MarcadeVehiculo.NISSAN;
             case "AUDI" -> this.marca = MarcadeVehiculo.AUDI;
-            default -> this.marca = MarcadeVehiculo.NO_VALIDA;
+            default -> this.marca = MarcadeVehiculo.NO_DETERMINADA;
         }
     }
 
