@@ -88,12 +88,12 @@ public class Texto {
     }
 
     /**
-     * metodo para añadir texto al principio de la cadena
+     * metodo para añadir caracter al principio de la cadena
      * @param cadena
      */
-    public void addTextFirst(String cadena){
+    public void addCaracterFirst(String cadena){
         if(cadena.length()!=1){
-            return;
+
         }
         if(cadena.length()==1){
             if(this.caracteres.length()<this.limite){
@@ -106,8 +106,8 @@ public class Texto {
      * metodo para añadir texto al final de la cadena
      * @param cadena
      */
-    public void addTextLast(String cadena){
-        if(cadena.length()!=1){
+    public void addCaracterLast(String cadena){
+        if(cadena.length()!=7){
             return;
         }
         if(cadena.length()==1){

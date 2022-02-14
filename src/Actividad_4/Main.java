@@ -6,12 +6,12 @@ public class Main {
 
         Texto miCadena=new Texto(6);
 
-        miCadena.addTextFirst("f");
-        miCadena.addTextLast("r");
-        miCadena.addTextFirst("a");
-        miCadena.addTextLast("p");
-        miCadena.addTextFirst("u");
-        miCadena.addTextLast("e");
+        miCadena.addCaracterFirst("f");
+        miCadena.addCaracterLast("r");
+        miCadena.addCaracterFirst("a");
+        miCadena.addCaracterLast("p");
+        miCadena.addCaracterFirst("u");
+        miCadena.addCaracterLast("e");
 
         System.out.println(miCadena.getCaracteres());
         System.out.println("Mi cadena de texto tiene: " + miCadena.countVocal() + " vocales");

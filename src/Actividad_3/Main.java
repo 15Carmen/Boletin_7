@@ -37,10 +37,10 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         VEHICULO A = null;//coche
-        VEHICULO B=null;//camion
+        VEHICULO B = null;//camion
         VEHICULO C = null;//barco
-        VEHICULO D=null;//tren
-        VEHICULO E=null;//camion
+        VEHICULO D = null;//tren
+        VEHICULO E = null;//camion
 
         System.out.println(A.CAMION);
         System.out.println(A.CAMION.posicion);
