@@ -4,54 +4,55 @@ import java.util.Scanner;
 
 public class Main {
 
-    public class PruebaFraccion {
-        public static void main (String args[]){
-            Scanner teclado = new Scanner(System.in);
-            int numerador, denominador;
+    public static void main(String[] args) {
 
-            System.out.println("introduzca el numerador");
-            numerador= teclado.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-            System.out.println("introduzca el denominador distinto de 0");
-            denominador= teclado.nextInt();
+        int numerador, denominador;
 
-            while (denominador ==0){
-                System.out.println("introduzca  el denominador distinto de 0");
-                denominador= teclado.nextInt();
-            }
+        System.out.println("Introduzca el numerador de la fracción");
+        numerador = sc.nextInt();
 
-            // Creo mi fracción
-            Fraccion miFraccion = new Fraccion(numerador,denominador);
-            System.out.println("la fracción introducida es: ");
-            System.out.println(miFraccion);
+        //precondición: el denominador tiene que ser distinto de cero
 
-            //voy a multiplicar la fracción por 5
-            miFraccion.multiplicarPor(-5);
-            System.out.println("multiplico por -5:");
-            System.out.println(miFraccion);
+        System.out.println("Introduzca el denominador de la fracción distinto de 0");
+        denominador = sc.nextInt();
 
-            //voy a dividir la fracción por 5
-            miFraccion.dividirPor(5);
-            System.out.println("divido por 5:");
-            System.out.println(miFraccion);
-
-            //voy a multiplicar la fracción por 3/5
-            Fraccion miSegundaFraccion = new Fraccion(3,5);
-            miFraccion.multiplicarPor(miSegundaFraccion);
-            System.out.println("multiplico mi fracción por 3/5:");
-            System.out.println(miFraccion);
-
-            //voy a dividir  la fracción por 3/5
-            miFraccion.dividirPor(miSegundaFraccion);
-            System.out.println("divido mi fracción por 3/5:");
-            System.out.println(miFraccion);
-
-            //voy a invertir la fracción de signo
-            miFraccion.invertirSigno();
-            System.out.println("le cambio el signo");
-            System.out.println(miFraccion);
-
+        while (denominador ==0){
+            System.out.println("Por favor, lee lo que decimos: introduzca el denominador distinto de 0");
+            denominador= sc.nextInt();
         }
-    }
 
+        //Creamos la fracción
+
+        Fraccion fraccioncilla = new Fraccion(numerador,denominador);
+        System.out.println("La fracción que has introducido es: ");
+        System.out.println(fraccioncilla);
+
+        //multiplicamos la fracción por 2
+        fraccioncilla.multiplicarNumero(2);
+        System.out.println("Multiplico la fracción por 2: ");
+        System.out.println(fraccioncilla);
+
+        //dividimos la fracción entre -2
+        fraccioncilla.dividirNumero(-2);
+        System.out.println("Divido la fracción entre -2: ");
+        System.out.println(fraccioncilla);
+
+        //multiplicamos la fracción por 1/3
+        Fraccion fraccioncilla2 = new Fraccion(1,3);
+        fraccioncilla.multiplicarFraccion(fraccioncilla2);
+        System.out.println("Multiplico la fracción por 1/3: ");
+        System.out.println(fraccioncilla);
+
+        //dividimos la fracción por 1/3
+        fraccioncilla.dividirFraccion(fraccioncilla2);
+        System.out.println("Divido la fracción por 1/3: ");
+        System.out.println(fraccioncilla);
+
+        //invertimos la fracción de signo
+        fraccioncilla.invertirSigno();
+        System.out.println("La fracción con el signo cambiado es: ");
+        System.out.println(fraccioncilla);
+    }
 }
